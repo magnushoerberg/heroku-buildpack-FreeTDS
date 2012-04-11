@@ -41,4 +41,6 @@ make | indent
 echo "-----> Configure Install FreeTDS"
 make install | indent
 cd $BUILD_DIR
-echo "-----> Installed FreeTDS"
+echo "-----> Installe Bundler"
+gem install bundle | indent
+
