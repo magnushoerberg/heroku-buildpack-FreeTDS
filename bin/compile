@@ -2,10 +2,10 @@
 # bin/compile <build-dir> <cache-dir>
 
 # fail fast
-#set -e
+set -e
 
 # debug
-set -x
+#set -x
 
 # clean up leaking environment
 unset GIT_DIR
@@ -40,3 +40,5 @@ echo "-----> Configure make"
 make | indent
 echo "-----> Configure Install FreeTDS"
 make install | indent
+cd $BUILD_DIR
+echo "-----> Installed FreeTDS"
