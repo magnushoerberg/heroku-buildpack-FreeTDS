@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cat << EOF
+---
+addons:
+  - shared-database:5mb
+config_vars:
+  PATH: bin:/usr/bin:/bin
+  RACK_ENV: production
+  RAILS_ENV: production
+default_process_types:
+EOF

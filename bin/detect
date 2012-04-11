@@ -1,5 +1,6 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 # bin/detect <build-dir>
+
 if [ -f $1/Gemfile ]; then
   echo "FreeTDS" && exit 0
 else
