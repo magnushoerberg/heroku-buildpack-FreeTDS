@@ -34,8 +34,9 @@ cp -r $CACHE_DIR/freetds-$VERSION $BUILD_DIR/freetds
 
 cd $BUILD_DIR/freetds
 
-echo "-----> Installing FreeTDS"
-
-./configure --prefix=$BUILD_DIR
-make
-make install
+echo "-----> Configure FreeTDS"
+./configure --prefix=$BUILD_DIR | indent
+echo "-----> Configure make"
+make | indent
+echo "-----> Configure Install FreeTDS"
+make install | indent
